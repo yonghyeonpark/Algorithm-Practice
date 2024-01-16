@@ -1,4 +1,4 @@
-package baekjoon.dfsAndBfs;
+package baekjoon.DFS와BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,13 +19,11 @@ public class 점프왕쩰리_16173 {
         visited = new boolean[N][N];
         map = new int[N][N];
         for (int i = 0; i < N; i++) {
-            String row = br.readLine();
-            StringTokenizer st = new StringTokenizer(row);
+            StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                map[i][j] =Integer.parseInt(st.nextToken());
+                map[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-
         jump(0, 0, map[0][0]);
         System.out.println(result);
     }
